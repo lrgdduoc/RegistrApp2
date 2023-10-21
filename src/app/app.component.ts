@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { LoadingController, Platform } from '@ionic/angular';
+
+import { DatabaseService } from './services/database.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,4 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
 }

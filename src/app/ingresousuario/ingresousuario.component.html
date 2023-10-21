@@ -1,0 +1,44 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/home"></ion-back-button>
+  </ion-buttons>
+  <ion-title size="large">¡Bienvenido {{ nombreUsuario }}!</ion-title>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+
+
+    <ion-button expand="full" color="primary" (click)="openCamera()" [hidden]="cameraActive">Open Camera</ion-button>
+    <ion-button expand="full" color="danger" (click)="closeCamera()" [hidden]="!cameraActive">Close Camera</ion-button>
+    <video id="camera-preview" autoplay playsinline [hidden]="!cameraActive"></video>
+
+
+  <!-- Lista de Asistencias presentes -->
+  <ion-list>
+    <ion-list-header>Asistencias presentes</ion-list-header>
+
+  </ion-list>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Programacion web</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">80%</div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Programacion SQL</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">99%</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Etica para el trabajo</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">50%</div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
